@@ -40,7 +40,7 @@ public class ComedyMovieStorage implements MovieStorage<ComedyMovie>{
     @Override
     public void save(ComedyMovie movie) throws IOException {
         if (findById(movie.getId()) != null) {
-            return; // id already exists, do nothing
+            return;
         }
         List<ComedyMovie> movies = findAll();
         movies.add(movie);
